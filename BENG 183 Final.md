@@ -63,7 +63,6 @@ This transforms each variable to the same scale.
 After standardization and centering, we compute the covariance matrix. For three variables \(x, y, z\), the covariance matrix has the form:
 
 $$
-\Sigma =
 \begin{bmatrix}
 \sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
 \sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
@@ -98,7 +97,7 @@ v_2 =
 \quad \lambda_2 = 0.04908323
 $$
 
-If we divide each eigenvalue by the sum \(\lambda_1 + \lambda_2\), we get the percentage of variance explained by each component. This tells us how important each principal component is.
+If we divide each eigenvalue by the sum \( \lambda_1 + \lambda_2 \), we get the percentage of variance explained by each component. This tells us how important each principal component is.
 
 ### 2.4 Create feature vector
 
