@@ -1,7 +1,3 @@
-*Final Paper Grading Rubric*
-
-<https://zhonglab.gitbook.io/3dgenome> 3D genome book chapters
-
 # Principal Component Analysis for Single-Cell RNA-seq
 
 **Shuo Qin, Minzhou Ou, Margaret Zhang**
@@ -197,6 +193,7 @@ Overall, the authors recommend PCA as a robust default choice, especially when a
 Since PCA produces principal components that are linear combinations of the original variables, it is most suitable for modeling linear relationships as it assumes linearity. For example, if we were to model the position of a person on a ferris wheel, the data would be circular, but PCA would still produce two principal components that are linear and orthogonal to each other. As shown in Fig 1, this does not capture the nature of the data well.
 
 <img width="569" height="300" alt="image" src="https://github.com/user-attachments/assets/2b23f519-745f-4b50-90ad-348b063177d2" />
+
 > Fig 1. (A) Modeling a person on a ferris wheel. Red arrows represent PCs from PCA. Due to linearity and orthogonality, the PCs do not model the data well. (B) Data is linear but not orthogonal. Red arrows represent PCs, but do not fit the axes of the data well.
 
 ### 4.2 Orthogonality
@@ -233,13 +230,14 @@ Ancestry is an important part of GWAS, as samples from the same ancestry tend to
 
 ## References
 
-Sun, Shiquan, et al. “Accuracy, Robustness and Scalability of Dimensionality Reduction Methods for Single-Cell RNA-Seq Analysis.” *Genome Biology*, vol. 20, Dec. 2019, p. 269. PubMed Central, https://doi.org/10.1186/s13059-019-1898-6.
+1. Sun, Shiquan, et al. “Accuracy, Robustness and Scalability of Dimensionality Reduction Methods for Single-Cell RNA-Seq Analysis.” *Genome Biology*, vol. 20, Dec. 2019, p. 269. PubMed Central, <https://doi.org/10.1186/s13059-019-1898-6>.
 
-“Principal Component Analysis (PCA): Explained Step-by-Step.” *Built In*, builtin.com/data-science/step-step-explanation-principal-component-analysis. Accessed 5 Dec. 2025.
+2. “Principal Component Analysis (PCA): Explained Step-by-Step.” *Built In*, <https://builtin.com/data-science/step-step-explanation-principal-component-analysis>. Accessed 5 Dec. 2025.
 
-“What Is Principal Component Analysis (PCA)?” *IBM*, 17 Nov. 2025, www.ibm.com/think/topics/principal-component-analysis. Accessed 05 Dec. 2025.
+3. “What Is Principal Component Analysis (PCA)?” *IBM*, 17 Nov. 2025, <https://www.ibm.com/think/topics/principal-component-analysis>. Accessed 05 Dec. 2025.
 
-Kamperis, Stathis. *Principal Component Analysis Limitations and How to Overcome Them*, 23 Feb. 2021, ekamperi.github.io/mathematics/2021/02/23/pca-limitations.html. Accessed 05 Dec. 2025.
+4. Kamperis, Stathis. *Principal Component Analysis Limitations and How to Overcome Them*, 23 Feb. 2021, <https://ekamperi.github.io/mathematics/2021/02/23/pca-limitations.html>. Accessed 05 Dec. 2025.
 
-Stuart, Tim, et al. “Comprehensive Integration of Single-Cell Data.” *Cell*, vol. 177, no. 7, June 2019, pp. 1888–1902.e21. PubMed Central, https://doi.org/10.1016/j.cell.2019.05.031.
+5. Stuart, Tim, et al. “Comprehensive Integration of Single-Cell Data.” *Cell*, vol. 177, no. 7, June 2019, pp. 1888–1902.e21. PubMed Central, <https://doi.org/10.1016/j.cell.2019.05.031>.
+
 
