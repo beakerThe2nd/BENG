@@ -53,9 +53,9 @@ Here, we briefly review the standard PCA procedure, covariance matrices, eigenva
 
 We first standardize each variable:
 
-\[
+$\[
 z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}
-\]
+\]$
 
 The equation transforms each variable to the same scale to avoid biased results.
 
