@@ -101,7 +101,7 @@ If we divide each eigenvalue by the sum $(\lambda_1 + \lambda_2)$, we get the pe
 
 ### 2.4 Create feature vector
 
-Since component 1 is more significant $(\(\lambda_1 = 1.284028 > 0.04908323\))$, we can reduce dimensionality by keeping only the first eigenvector:
+Since component 1 is more significant $\(\lambda_1 = 1.284028 > 0.04908323\)$, we can reduce dimensionality by keeping only the first eigenvector:
 
 $$
 \text{FeatureVector} =
