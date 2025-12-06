@@ -54,7 +54,7 @@ Here, we briefly review the standard PCA procedure, covariance matrices, eigenva
 
 - Standardization and Centering Data
 
-  - z = value - meanstandard deviation
+  - z = $Z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}$
 
   - The equation transforms each variable to the same scale to avoid biased results.
 
