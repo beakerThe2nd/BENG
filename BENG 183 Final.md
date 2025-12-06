@@ -1,3 +1,7 @@
+*Final Paper Grading Rubric*
+
+<https://zhonglab.gitbook.io/3dgenome> 3D genome book chapters
+
 # Principal Component Analysis for Single-Cell RNA-seq
 
 **Shuo Qin, Minzhou Ou, Margaret Zhang**
@@ -53,9 +57,9 @@ Here, we briefly review the standard PCA procedure, covariance matrices, eigenva
 
 We first standardize each variable:
 
-$\[
+$$
 z = \frac{\text{value} - \text{mean}}{\text{standard deviation}}
-\]$
+$$
 
 The equation transforms each variable to the same scale to avoid biased results.
 
@@ -63,13 +67,13 @@ The equation transforms each variable to the same scale to avoid biased results.
 
 For three variables \(x, y, z\), the covariance matrix has the form:
 
-\[
+$$
 \begin{bmatrix}
 \mathrm{Cov}(x,x) & \mathrm{Cov}(x,y) & \mathrm{Cov}(x,z) \\
 \mathrm{Cov}(y,x) & \mathrm{Cov}(y,y) & \mathrm{Cov}(y,z) \\
 \mathrm{Cov}(z,x) & \mathrm{Cov}(z,y) & \mathrm{Cov}(z,z)
 \end{bmatrix}
-\]
+$$
 
 The matrix equation tests the correlation between two variables:
 
@@ -80,37 +84,43 @@ The matrix equation tests the correlation between two variables:
 
 If we have two eigenvectors with their corresponding eigenvalues:
 
-\[
+$$
 v_1 =
 \begin{bmatrix}
 0.6778736 \\
 0.7351785
 \end{bmatrix},
 \quad \lambda_1 = 1.284028
-\]
+$$
 
-\[
+$$
 v_2 =
 \begin{bmatrix}
 -0.7351785 \\
 0.6778736
 \end{bmatrix},
 \quad \lambda_2 = 0.04908323
-\]
+$$
 
-If we divide the eigenvalue of each component by the sum \((\lambda_1 + \lambda_2)\), we get the percentage of variance of the data. Therefore, we get each principal component's significance.
+If we divide the eigenvalue of each component by the sum
+
+$$
+\lambda_1 + \lambda_2
+$$
+
+we get the percentage of variance of the data. Therefore, we get each principal component's significance.
 
 #### Create Feature Vector
 
 Since vector 1 is more significant with \(1.284028 > 0.04908323\), the feature vector is formed with vector 1. This result is achieved by reducing dimensionality by 1:
 
-\[
+$$
 \text{FeatureVector} =
 \begin{bmatrix}
 0.6778736 \\
 0.7351785
 \end{bmatrix}
-\]
+$$
 
 This will be the vector as the principal component.
 
@@ -118,12 +128,12 @@ This will be the vector as the principal component.
 
 Eventually, the feature vector will be used to reorient data from original axes to be represented by principal components:
 
-\[
+$$
 \text{FinalDataSet} =
 \text{FeatureVector}^\top
 \cdot
 \text{StandardizedOriginalDataSet}^\top
-\]
+$$
 
 ---
 
