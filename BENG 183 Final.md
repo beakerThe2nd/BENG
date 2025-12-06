@@ -155,7 +155,6 @@ Sun et al. reach several important conclusions about PCA in the scRNA-seq contex
 
 Overall, the authors recommend PCA as robust default choices, especially when analysts want to retain a moderate to large number of components. Non-linear methods like UMAP may be preferable when only a very small number of dimensions is needed or when one cares primarily about visualization. This case study supports the idea that PCA, although very simple conceptually, is still a strong algorithm for scRNA-seq dimensionality reduction.
 
-\
 
 
 
