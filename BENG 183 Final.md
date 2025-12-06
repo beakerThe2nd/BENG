@@ -63,11 +63,11 @@ This transforms each variable to the same scale.
 After standardization and centering, we compute the covariance matrix. For three variables \(x, y, z\), the covariance matrix has the form:
 
 $$
-\text{Cov} =
+\Sigma =
 \begin{bmatrix}
-\operatorname{Cov}(x,x) & \operatorname{Cov}(x,y) & \operatorname{Cov}(x,z) \\
-\operatorname{Cov}(y,x) & \operatorname{Cov}(y,y) & \operatorname{Cov}(y,z) \\
-\operatorname{Cov}(z,x) & \operatorname{Cov}(z,y) & \operatorname{Cov}(z,z)
+\sigma_{xx} & \sigma_{xy} & \sigma_{xz} \\
+\sigma_{yx} & \sigma_{yy} & \sigma_{yz} \\
+\sigma_{zx} & \sigma_{zy} & \sigma_{zz}
 \end{bmatrix}
 $$
 
