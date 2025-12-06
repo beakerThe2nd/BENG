@@ -97,7 +97,7 @@ v_2 =
 \quad \lambda_2 = 0.04908323
 $$
 
-If we divide each eigenvalue by the sum \( \lambda_1 + \lambda_2 \), we get the percentage of variance explained by each component. This tells us how important each principal component is.
+If we divide each eigenvalue by the sum $(\lambda_1 + \lambda_2)$, we get the percentage of variance explained by each component. This tells us how important each principal component is.
 
 ### 2.4 Create feature vector
 
