@@ -196,9 +196,50 @@ Overall, the authors recommend PCA as a robust default choice, especially when a
 
 Since PCA produces principal components that are linear combinations of the original variables, it is most suitable for modeling linear relationships as it assumes linearity. For example, if we were to model the position of a person on a ferris wheel, the data would be circular, but PCA would still produce two principal components that are linear and orthogonal to each other. As shown in Fig 1, this does not capture the nature of the data well.
 
+<img width="569" height="300" alt="image" src="https://github.com/user-attachments/assets/2b23f519-745f-4b50-90ad-348b063177d2" />
 > Fig 1. (A) Modeling a person on a ferris wheel. Red arrows represent PCs from PCA. Due to linearity and orthogonality, the PCs do not model the data well. (B) Data is linear but not orthogonal. Red arrows represent PCs, but do not fit the axes of the data well.
 
-*(You can insert your figure here, for example:)*
+### 4.2 Orthogonality
 
-```markdown
-![Figure 1. (A) Modeling a person on a ferris wheel. (B) Data is linear but not orthogonal.](figure1.png)
+As mentioned, PCA produces principal components that are orthogonal or uncorrelated. The reason for this is because PCA aims at identifying maximum variance. By assuming orthogonality, PCA identifies principal components uncorrelated with each other, thus modeling the most variance. While this can be beneficial by design, the assumption of orthogonality can also limit the datasets we can model with a strong fit. As shown in Fig 1, a dataset that inherently has axes that are not orthogonal may not be suitably modeled via PCA.
+
+### 4.3 Outliers
+
+PCA is sensitive to outliers, which is a limitation for processing any dataset including extreme outliers. This is due to the fact that PCA looks for maximum variance – since outliers would have variance from other data points, having several extreme outliers would automatically skew the calculation of the principal component.
+
+### 4.4 Sensitivity to Scale
+
+For the same reason of finding variance, PCA is highly sensitive to scale as well. If a dataset contained data using different scales or units, results would be skewed as well due to the bias caused by scaling. In other words, due to the use of different scales, there would be a biased pattern of larger variances that would dominate the results of PCA.
+
+For this reason, typically data should be standardized before PCA. This could be a limitation depending on the nature of the dataset.
+
+### 4.5 Interpretation
+
+Finally, a limitation that PCA poses is the difficulty of interpretation. Since PCA reduces dimensionality, principal components may lose real-world meaning in the process. One example can be using PCA to evaluate data from cancer samples. Suppose our aim is to identify cancer subtypes – what we can see from PCA is groups of genes that have similar patterns across their change in expression levels. However, even if genes show similar patterns in expression levels, they are not necessarily involved in the same biological processes, which leaves us with the question of what the principal components actually stand for in the biological sense.
+
+## 5. Further Applications of PCA
+
+### 5.1 RNA-seq and Microarray Analysis
+
+PCA is often done on RNA-seq and microarray samples. The first reason for using PCA is quality control – we expect that replicate samples should cluster together since they should not have a lot of variance. This is a good way to confirm replicability. Another use of PCA is experimentally identifying patterns across samples from different conditions. PCA gives us a general image of how different data points differ from each other, so it is a good point to start.
+
+### 5.2 Weighted Gene Co-expression Network Analysis (WGCNA)
+
+WGCNA is a method that builds a network based on correlation between the expression level of various genes and assigns highly correlated genes to modules. In this process, module eigengenes (MEs) are calculated – this is the PC1 of a module of genes. MEs are used to represent the overall profile of a module of genes. Such modules allow us to further explore biological processes correlated with certain conditions.
+
+### 5.3 Genome Wide Association Study (GWAS)
+
+Ancestry is an important part of GWAS, as samples from the same ancestry tend to exhibit similar patterns. In certain studies, this similarity can cause false or skewed results. Hence, we can separate individuals by ancestries through PCA clusters before continuing further analysis.
+
+## References
+
+Sun, Shiquan, et al. “Accuracy, Robustness and Scalability of Dimensionality Reduction Methods for Single-Cell RNA-Seq Analysis.” *Genome Biology*, vol. 20, Dec. 2019, p. 269. PubMed Central, https://doi.org/10.1186/s13059-019-1898-6.
+
+“Principal Component Analysis (PCA): Explained Step-by-Step.” *Built In*, builtin.com/data-science/step-step-explanation-principal-component-analysis. Accessed 5 Dec. 2025.
+
+“What Is Principal Component Analysis (PCA)?” *IBM*, 17 Nov. 2025, www.ibm.com/think/topics/principal-component-analysis. Accessed 05 Dec. 2025.
+
+Kamperis, Stathis. *Principal Component Analysis Limitations and How to Overcome Them*, 23 Feb. 2021, ekamperi.github.io/mathematics/2021/02/23/pca-limitations.html. Accessed 05 Dec. 2025.
+
+Stuart, Tim, et al. “Comprehensive Integration of Single-Cell Data.” *Cell*, vol. 177, no. 7, June 2019, pp. 1888–1902.e21. PubMed Central, https://doi.org/10.1016/j.cell.2019.05.031.
+
